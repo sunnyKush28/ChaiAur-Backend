@@ -5,6 +5,10 @@ const express = require('express') // modual js
 const app = express()
 const port = 4000
 
+const gitHubData = {
+    "message": "Not Found",
+    "documentation_url": "https://docs.github.com/rest/users/users#get-a-user"
+}
 app.get('/', (req, res) => {
     res.send('Hello World!')
 })
@@ -20,6 +24,11 @@ app.get('/login', (req, res) => {
 app.get('/youtube', (req, res) => {
     res.send('sunny with code')
 })
+
+app.get('/github', (req, res) => {
+    res.json(gitHubData)
+})
 app.listen(process.env.PORT, () => {
     console.log(`Example app listening on port ${port}`)
 })
+
