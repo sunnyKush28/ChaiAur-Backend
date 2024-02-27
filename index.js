@@ -1,7 +1,7 @@
 require('dotenv').config()
 
-const express = require('express') // modual js
-// import express from 'express' // common js
+const express = require('express') // common js
+// import express from 'express' // modual js
 const app = express()
 const port = 4000
 
